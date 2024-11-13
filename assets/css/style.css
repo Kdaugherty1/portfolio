@@ -12,8 +12,7 @@
 9. Portfolio
 10. Testimonial
 11. Contact Us
-
--------------------------------------------------------------------*/
+-----*/
 @import url(../vendor/bootstrap/css/bootstrap.min.css);
 @import url(../vendor/bootstrap/icons/bootstrap-icons.css);
 @import url(../vendor/owl-carousel/css/owl.carousel.min.css);
@@ -491,6 +490,7 @@ main {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  margin-bottom: 18px;
 }
 .portfolio-filter li {
   display: inline-block;
@@ -512,8 +512,6 @@ main {
   left: 0;
   right: 0;
   z-index: -1;
-  transform: skew(-20deg);
-  -webkit-transform: skew(-20deg);
 }
 .portfolio-filter li:not(.active):after {
   background: #000;
