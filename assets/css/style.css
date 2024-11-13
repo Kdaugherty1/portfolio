@@ -56,17 +56,19 @@
         right: 0;
         width: 0;
         height: 2px;
-        background: #FF651C;
+        background:  #968EAF;
         transition: ease all 0.35s; }
         @media (max-width: 991px) {
           .main-header .navbar-nav > li > .nav-link:after {
             display: none; } }
       .main-header .navbar-nav > li > .nav-link:hover, .main-header .navbar-nav > li > .nav-link.active {
-        color: #FF651C; }
+        color:  #968EAF; }
         .main-header .navbar-nav > li > .nav-link:hover:after, .main-header .navbar-nav > li > .nav-link.active:after {
           left: 0;
           right: auto;
           width: 100%; }
+
+      
 
 @media (max-width: 991px) {
   .main-header .navbar-toggler {
@@ -118,32 +120,32 @@
   transition: ease all 0.35s;
   display: inline-block; }
   .px-btn.px-btn-theme {
-    background: #FF651C;
-    border-color: #FF651C;
+    background:  #968EAF;
+    border-color:  #968EAF;
     color: #fff;
     box-shadow: 6px 6px 0 -1px #373737; }
     .px-btn.px-btn-theme:hover {
       background: #373737;
       border-color: #373737;
-      box-shadow: 5px 5px 0 -2px #FF651C; }
+      box-shadow: 5px 5px 0 -2px  #968EAF; }
   .px-btn.px-btn-theme2 {
     background: #FEC448;
     border-color: #FEC448;
     color: #373737;
-    box-shadow: 5px 5px 0 -2px #FF651C; }
+    box-shadow: 5px 5px 0 -2px  #968EAF; }
     .px-btn.px-btn-theme2:hover {
-      background: #FF651C;
-      border-color: #FF651C;
+      background:  #968EAF;
+      border-color:  #968EAF;
       color: #fff;
       box-shadow: 5px 5px 0 -2px #FEC448; }
   .px-btn.px-btn-dark {
     background: #373737;
     border-color: #373737;
     color: #fff;
-    box-shadow: 5px 5px 0 -2px #FF651C; }
+    box-shadow: 5px 5px 0 -2px  #968EAF; }
     .px-btn.px-btn-dark:hover {
-      background: #FF651C;
-      border-color: #FF651C;
+      background:  #968EAF;
+      border-color:  #968EAF;
       color: #fff;
       box-shadow: 5px 5px 0 -2px #373737; }
 
@@ -187,10 +189,10 @@ img {
   outline: none !important; }
 
 a {
-  color: #FF651C;
+  color:  #968EAF;
   text-decoration: none; }
   a:hover {
-    color: #f24e00;
+    color:  #968EAF;
     text-decoration: none; }
 
 .container {
@@ -205,7 +207,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #FF651C;
+  background:  #968EAF;
   z-index: 99999; }
 
 .load-circle {
@@ -397,7 +399,7 @@ main {
 .about-text h5 {
   font-weight: 600;
   font-size: 26px;
-  color: #FF651C;
+  color:  #968EAF;
   margin: 0; }
 
 .about-text span {
