@@ -105,36 +105,52 @@
      * lightbox gallery
     /* ---------------------------------------------- */
     WEA.Gallery = function() {
-      if ($(".lightbox-gallery").exists() || $(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()){
-        loadScript(plugin_track + 'magnific/jquery.magnific-popup.min.js', function() {
-          if($(".lightbox-gallery").exists()){
-            $('.lightbox-gallery').magnificPopup({
-                delegate: '.gallery-link',
-                type: 'image',
-                tLoading: 'Loading image #%curr%...',
-                mainClass: 'mfp-fade',
-                fixedContentPos: true,
-                closeBtnInside: false,
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0, 1] // Will preload 0 - before current, and 1 after WEA current image
-                }
-            }); 
-          }
-          if ($(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
-                $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+      if ($(".lightbox-gallery").exists() || $(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
+          loadScript(plugin_track + 'magnific/jquery.magnific-popup.min.js', function() {
+              // Lightbox for images (same as your existing setup)
+              if ($(".lightbox-gallery").exists()) {
+                  $('.lightbox-gallery').magnificPopup({
+                      delegate: '.gallery-link',
+                      type: 'image', // Using image type for image links
+                      tLoading: 'Loading image #%curr%...',
+                      mainClass: 'mfp-fade',
+                      fixedContentPos: true,
+                      closeBtnInside: false,
+                      gallery: {
+                          enabled: true,
+                          navigateByImgClick: true,
+                          preload: [0, 1] // Preload images around current one
+                      }
+                  });
+              }
+  
+              // Text-based popup for project descriptions
+              if ($(".gallery-link").exists()) {
+                  $('.gallery-link').magnificPopup({
+                      type: 'inline', // Use 'inline' for text content
+                      tLoading: 'Loading text...',
+                      mainClass: 'mfp-fade',
+                      fixedContentPos: true,
+                      closeBtnInside: false,
+                      removalDelay: 160, // Animation duration for the popup's removal
+                      preloader: false
+                  });
+              }
+  
+              // Handling for other media popups like YouTube, Vimeo, and Google Maps
+              if ($(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
+                  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
                       disableOn: 700,
                       type: 'iframe',
                       mainClass: 'mfp-fade',
                       removalDelay: 160,
                       preloader: false,
                       fixedContentPos: false
-                });
-            }
-        });
+                  });
+              }
+          });
       }
-    }
+  };
 
      /*--------------------
     * Masonry
