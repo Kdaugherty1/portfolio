@@ -41,7 +41,7 @@
         right: 0;
         width: 0;
         height: auto;
-        background:  #968EAF;
+        background:  #fff;
         transition: ease all 0.35s; }
         @media (max-width: 991px) {
           .main-header .navbar-nav > li > .nav-link:after {
@@ -215,10 +215,10 @@
                                     outline: none !important; }
                                   
                                   a {
-                                    color:  #968EAF;
+                                    color:  #fff;
                                     text-decoration: none; }
                                     a:hover {
-                                      color:  #968EAF;
+                                      color:  #fff;
                                       text-decoration: none; }
                                   
                                   .container {
