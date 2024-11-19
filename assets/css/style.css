@@ -196,7 +196,8 @@ a {
     text-decoration: none; }
 
 .container {
-  max-width: 1230px; }
+  max-width: auto; }
+
 
 /* ----------------------
 *   Loading
@@ -282,9 +283,6 @@ a {
   width: auto;
   max-width: 100%; }
 
-main {
-  position: relative;
-  z-index: 1; }
 
 .section-heading {
   padding-bottom: 60px; }
@@ -485,6 +483,107 @@ main {
     color: #373737;
     margin: 0;
     padding-left: 15px; }
+
+    .resume-row {
+      position: relative;
+    }
+    .resume-row:after {
+      position: absolute;
+      top: 10px;
+      bottom: 0;
+      left: 0;
+      width: 1px;
+      content: "";
+      border-left: 3px dashed #FECCB4;
+    }
+    
+    .resume-row h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0 0 20px 25px;
+    }
+    .resume-row h2:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 6px;
+      left: -6px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .resume-row ul {
+      margin: 0 0 0px 25px;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .resume-row li {
+      position: relative;
+      padding: 0;
+      border: 2px solid #9BD2CF;
+      border-bottom: 6px solid #9BD2CF;
+      margin-bottom: 23px;
+    }
+    
+    .resume-row li:after {
+        content: "";
+        width: 25px;
+        height: 1px;
+        position: absolute;
+        top: 25px;
+        left: -26px;
+        border-top: 2px dashed #FECCB4;
+    }
+    
+    .resume-row .r-name {
+      background-color: #9BD2CF;
+      border-bottom: 1px solid #9BD2CF;
+      padding: 10px 20px 7px 52px;
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+    }
+    
+    .resume-row .r-name label {
+      margin: 0;
+      font-size: 12px;
+      float: right;
+      width: 100%;
+    }
+    
+    .resume-row .r-name span {
+      font-weight: 500;
+      font-size: 16px;
+      float: left;
+      line-height: normal;
+      margin-bottom: 2px;
+    }
+    
+    .resume-row .r-name i {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      color: #111;
+      z-index: 1;
+    }
+    
+    .resume-row .r-info {
+      padding: 15px 20px;
+      font-size: 13px;
+    }
+    
+    .resume-row .r-info p {
+      margin: 0;
+    }
+       
 
 /* Portfolio 
 ---------------------*/
@@ -716,4 +815,36 @@ main {
     @media (max-width: 767px) {
       .contact-infos p {
         font-size: 20px; } }
-
+       /*--------------------------------------------------------------
+        # Scroll Top Button
+        --------------------------------------------------------------*/
+        .scroll-top {
+          position: fixed;
+          visibility: hidden;
+          opacity: 0;
+          right: 15px;
+          bottom: -15px;
+          z-index: 99999;
+          background-color: var(--accent-color);
+          width: 44px;
+          height: 44px;
+          border-radius: 50px;
+          transition: all 0.4s;
+        }
+        
+        .scroll-top i {
+          font-size: 24px;
+          color: var(--contrast-color);
+          line-height: 0;
+        }
+        
+        .scroll-top:hover {
+          background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+          color: var(--contrast-color);
+        }
+        
+        .scroll-top.active {
+          visibility: visible;
+          opacity: 1;
+          bottom: 15px;
+        }
