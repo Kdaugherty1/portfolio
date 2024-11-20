@@ -338,3 +338,9 @@
                 color: color-mix(in srgb, var(--default-color), transparent 30%);
               }
                                                                           
+            form {
+              text-decoration: none;
+              display: inline-block;
+              padding: 18px 20px;
+  
+            }
