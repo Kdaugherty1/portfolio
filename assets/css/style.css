@@ -816,35 +816,20 @@ a {
       .contact-infos p {
         font-size: 20px; } }
        /*--------------------------------------------------------------
-        # Scroll Top Button
+        # Progress Bar
         --------------------------------------------------------------*/
-        .scroll-top {
-          position: fixed;
-          visibility: hidden;
-          opacity: 0;
-          right: 15px;
-          bottom: -15px;
-          z-index: 99999;
-          background-color: var(--accent-color);
-          width: 44px;
-          height: 44px;
-          border-radius: 50px;
-          transition: all 0.4s;
-        }
-        
-        .scroll-top i {
-          font-size: 24px;
-          color: var(--contrast-color);
-          line-height: 0;
-        }
-        
-        .scroll-top:hover {
-          background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-          color: var(--contrast-color);
-        }
-        
-        .scroll-top.active {
-          visibility: visible;
-          opacity: 1;
-          bottom: 15px;
-        }
+        .skill-bar {
+          background-color: #e0e0e0; /* Background color for the progress bar */
+          border-radius: 5px;
+          height: 10px; /* Height of the progress bar */
+          margin-top: 10px; /* Space above the progress bar */
+          overflow: hidden;
+          position: relative;
+      }
+      
+      .skill-bar-in {
+          background-color: #76c7c0; /* Color of the progress fill */
+          height: 100%;
+          width: 0; /* Start at 0, will be animated by JavaScript */
+          transition: width 1s ease-in-out; /* Smooth transition */
+      }
