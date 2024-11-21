@@ -754,64 +754,7 @@ a {
     .feature-box-03 .feature-content span {
       font-size: 14px; }
 
-.contact-form {
-  border: 2px solid #373737;
-  padding: 35px;
-  background: #fff; }
-  @media (max-width: 767px) {
-    .contact-form {
-      padding: 25px; } }
-  .contact-form h6 {
-    font-size: 32px;
-    font-weight: 600;
-    color: #373737;
-    margin: 0 0 5px; }
-  .contact-form .lead {
-    font-weight: 400;
-    font-size: 18px;
-    margin: 0 0 30px; }
-  .contact-form .form-control {
-    border-radius: 0;
-    border: 1px solid #373737;
-    box-shadow: none;
-    padding: 0.575rem .75rem; }
 
-.contact-infos {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .contact-infos li {
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    padding-bottom: 35px; }
-    .contact-infos li:last-child {
-      padding-bottom: 0; }
-  .contact-infos .icon {
-    width: 55px;
-    height: 55px;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-align: center;
-        align-items: center;
-    color: #373737;
-    -ms-flex-pack: center;
-        justify-content: center;
-    font-size: 25px; }
-  .contact-infos .col {
-    padding-left: 15px; }
-  .contact-infos h5 {
-    font-size: 14px;
-    margin: 0 0 5px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase; }
-  .contact-infos p {
-    margin: 0;
-    font-size: 20px;
-    color: #fff;
-    font-weight: 500; }
     @media (max-width: 767px) {
       .contact-infos p {
         font-size: 20px; } }
@@ -852,3 +795,8 @@ a {
       #myBtn:hover {
         background-color: #555; /* Add a dark-grey background on hover */
       }
+      .businesscard {
+        text-align: center;
+        color: #FECCB4;
+      }    
+      
