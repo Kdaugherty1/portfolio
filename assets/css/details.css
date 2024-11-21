@@ -288,14 +288,14 @@
                 position: relative;
               }
               
-              .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+              .portfolio-details . {
                 width: 12px;
                 height: 12px;
                 background-color: color-mix(in srgb, var(--default-color), transparent 85%);
                 opacity: 1;
               }
               
-              .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+              .portfolio-details {
                 background-color: var(--accent-color);
               }
               
@@ -317,6 +317,9 @@
                 list-style: none;
                 padding: 0;
                 font-size: 15px;
+              }
+              .portfolio-info ul a {
+                color: #968EAF;
               }
               
               .portfolio-details .portfolio-info ul li+li {
