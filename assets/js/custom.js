@@ -101,7 +101,40 @@
       }
     }
 
-  
+  /* ---------------------------------------------- /*
+     * lightbox gallery
+    /* ---------------------------------------------- */
+    WEA.Gallery = function() {
+      if ($(".lightbox-gallery").exists() || $(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()){
+        loadScript(plugin_track + 'magnific/jquery.magnific-popup.min.js', function() {
+          if($(".lightbox-gallery").exists()){
+            $('.lightbox-gallery').magnificPopup({
+                delegate: '.gallery-link',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-fade',
+                fixedContentPos: true,
+                closeBtnInside: false,
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after WEA current image
+                }
+            }); 
+          }
+          if ($(".popup-youtube, .popup-vimeo, .popup-gmaps").exists()) {
+                $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                      disableOn: 700,
+                      type: 'iframe',
+                      mainClass: 'mfp-fade',
+                      removalDelay: 160,
+                      preloader: false,
+                      fixedContentPos: false
+                });
+            }
+        });
+      }
+    }
 
      /*--------------------
     * Masonry
@@ -132,9 +165,7 @@
         });
       }
   }
-   /*--------------------
-        * Pop Up bar
-    ----------------------*/
+
   /*--------------------
         * Progress Bar 
     ----------------------*/
@@ -150,6 +181,7 @@
           }
         });
     }
+
     /*--------------------
         * particles
     ----------------------*/
@@ -221,66 +253,6 @@
         callback();
       }
   };
-  document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
-    let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
-    let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
-    let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector(".isotope-container"), function () {
-      initIsotope = new Isotope(
-        isotopeItem.querySelector(".isotope-container"),
-        {
-          itemSelector: ".isotope-item",
-          layoutMode: layout,
-          filter: filter,
-          sortBy: sort,
-        }
-      );
-    });
-
-    isotopeItem
-      .querySelectorAll(".isotope-filters li")
-      .forEach(function (filters) {
-        filters.addEventListener(
-          "click",
-          function () {
-            isotopeItem
-              .querySelector(".isotope-filters .filter-active")
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            initIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
-            });
-            if (typeof aosInit === "function") {
-              aosInit();
-            }
-          },
-          false
-        );
-      });
-  });
-
-
-  // Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
 
   // Window on Load
   $(window).on("load", function(){

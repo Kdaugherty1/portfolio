@@ -592,6 +592,7 @@ a {
   padding: 0;
   list-style-type: none;
   margin-bottom: 18px;
+  text-align: center;
 }
 .portfolio-filter li {
   display: inline-block;
@@ -604,6 +605,7 @@ a {
   letter-spacing: 1px;
   margin: 2px 1px;
   cursor: pointer;
+  
 }
 .portfolio-filter li:after {
   content: "";
