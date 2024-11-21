@@ -310,20 +310,30 @@
                         <h3><span>My projects</span></h3>
                     </div>
                 </div>
-                <div class="portfolio-filter">
-                    <ul class="filter text-left text-md-center">
-                        <li class="active theme-after" onclick="filterSelection('all')">All</li>
-                        <li class="" onclick="filterSelection('website')">Website</li>
-                        <li class="" onclick="filterSelection('javascript')">Javascript</li>
-                        <li class="" onclick="filterSelection('database')">Database</li>
-                        <li class="" onclick="filterSelection('writing')">Writing Samples</li>
-                    </ul>
-                </div>
+                <div
+            class="isotope-layout"
+            data-default-filter="*"
+            data-layout="masonry"
+            data-sort="original-order"
+          >
+            <ul
+              class="portfolio-filter isotope-filters"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-web">Web Development</li>
+              <li data-filter=".filter-js">JavaScript</li>
+              <li data-filter=".filter-dataBase">Database</li>
+              <li data-filter=".filter-writing">Writing</li>
+              <!--Finish below-->
+            </ul>
+            
                 <div class="container lightbox-gallery portfolio-box">
                     <div class="row gx-3 pb-3 mb-5 pb-lg-3 mb-lg-3 gy-4">
 
                       <!-- Portfolio Item 1 -->
-                      <div class="col-lg-4 col-md-6 mb-4" class="filterDiv website">
+                      <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-web">
                         <div class="portfolio-box">
                             <div class="portfolio-img">
                                 <img src="assets/img/demedici.jpeg" title="" alt="" width="500" height="300">
@@ -341,7 +351,7 @@
                         </div>
                     </div>
                       <!-- Portfolio Item 2 -->
-                         <div class="col-lg-4 col-md-6 mb-4">
+                         <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-web">
                               <div class="portfolio-box">
                                     <div class="portfolio-img">
                                      <img src="assets/img/153outfitter.jpg" title="" alt="153 Outfitter Mockup" width="500" height="300">
@@ -359,7 +369,7 @@
                              </div>
     
       <!-- Portfolio Item 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-web">
             <div class="portfolio-box">
                 <div class="portfolio-img">
                     <img src="assets/img/parkmock.png" title="" alt="" width="500" height="300">
@@ -377,7 +387,7 @@
         </div>
      
         <!-- Portfolio Item 4 -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-writing">
             <div class="portfolio-box">
                 <div class="portfolio-img">
                     <img src="assets/img/memomockup.png" title="Design Mockup" alt="Design Memo Mockup" width="500" height="300">
@@ -394,7 +404,7 @@
             </div>
         </div>   
       <!-- Portfolio Item 5 -->
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-writing">
         <div class="portfolio-box">
             <div class="portfolio-img">
                 <img src="assets/img/analysismock.png" title="" alt="Analysis Essay Mockup" width="500" height="300">
@@ -411,7 +421,7 @@
         </div>
     </div>
       <!-- Portfolio Item 6 -->
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-js">
         <div class="portfolio-box">
             <div class="portfolio-img">
                 <img src="assets/img/jscalculator.png" title="Javascript Calculator" alt="Javascript calculator" width="500" height="300">
@@ -428,7 +438,7 @@
         </div>
     </div>
       <!-- Portfolio Item 7 -->
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-js">
         <div class="portfolio-box">
             <div class="portfolio-img">
                 <img src="assets/img/converter.png" title="AJAX Converter" alt="AJAX Converter" width="500" height="300">
@@ -445,7 +455,7 @@
         </div>
     </div> 
     <!-- Portfolio Item 8 -->
-    <div class="col-lg-4 col-md-6 mb-4">
+    <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-dataBase">
         <div class="portfolio-box">
             <div class="portfolio-img">
                 <img src="assets/img/jewelry.png" title="Jewelry Google Sheets" alt="Jewelry Google Sheets Mock up" width="500" height="300">
@@ -462,7 +472,7 @@
         </div>
     </div>
       <!-- Portfolio Item 9 -->
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item isotope-item filter-dataBase">
         <div class="portfolio-box">
             <div class="portfolio-img">
                 <img src="assets/img/spreadsheet.png" title="Spreadsheet Report" alt="Spreadsheet Report Mockup" width="500" height="300">
