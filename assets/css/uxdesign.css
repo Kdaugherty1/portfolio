@@ -1,0 +1,58 @@
+/* === Trendy Accordion Redesign === */
+.accordion-item {
+    background-color: #f7f6fa;
+    border: 1px solid #e0dbf0;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(150, 142, 175, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(150, 142, 175, 0.25);
+  }
+  
+  .accordion-button {
+    background-color: #968EAF;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 16px 16px 0 0;
+    padding: 1rem 1.25rem;
+    transition: background-color 0.3s ease;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #373737;
+    color: #FEC448;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  .accordion-body {
+    padding: 1rem 1.25rem;
+    background-color: #fff;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  /* === Section Styling for Consistency === */
+  #projectSection {
+    background: linear-gradient(145deg, #f9f8fb, #f0eff6);
+    padding: 80px 0;
+    border-radius: 20px;
+  }
+  #projectSection .section-title h2 {
+    font-size: 36px;
+    color: #373737;
+  }
+  #projectSection .section-title p {
+    max-width: 600px;
+    margin: auto;
+    color: #777;
+    font-size: 16px;
+  }
+  
